@@ -1,0 +1,51 @@
+<html>
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>invader</title>
+
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #000;
+		overflow: hidden;
+		background-image: url(img/bg.jpg);
+		background-position: 0 -20px;
+	}
+
+	.div3d{
+        -webkit-transform-style: 'preserve-3d';
+        -moz-transform-style: 'preserve-3d';
+	}
+
+	body>div{
+		-moz-transform: 	translate3d(0,0,0);
+		-webkit-transform: 	translate3d(0,0,0);
+        -o-transform: 		translate3d(0,0,0);
+        -ms-transform: 		translate3d(0,0,0);
+        transform: 			translate3d(0,0,0);
+		-webkit-perspective: 200px;
+		-moz-perspective: 200px;
+	}
+
+	</style>
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/stats.min.js"></script>
+	<script src="js/keyboard.js"></script>
+	<script src="game.js"></script>
+	<script src="alien.js"></script>
+	<script src="player.js"></script>
+	<script src="missile.js"></script>
+	
+	<script>
+
+		$(function(){
+			game.init();
+			game.run();
+		});
+		
+	</script>
+</body>
+</html>
